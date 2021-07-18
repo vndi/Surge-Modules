@@ -1,0 +1,20 @@
+#!name=Apple CDN
+#!desc=Change rules for apple cdn
+# > Apple CDN
+[Rule]
+PROCESS-NAME,storedownloadd,DIRECT
+USER-AGENT,com.apple.appstored*,DIRECT
+DOMAIN,aod.itunes.apple.com,DIRECT
+DOMAIN,api.smoot.apple.cn,DIRECT
+DOMAIN,appldnld.apple.com,DIRECT
+DOMAIN,apptrailers.itunes.apple.com,DIRECT
+DOMAIN,gs-loc-cn.apple.com,DIRECT
+DOMAIN,iosapps.itunes.apple.com,DIRECT
+DOMAIN,music.apple.com,DIRECT
+DOMAIN,mvod.itunes.apple.com,DIRECT
+DOMAIN,osxapps.itunes.apple.com,DIRECT
+DOMAIN,supportdownload.apple.com,DIRECT
+DOMAIN,swcdn.apple.com,DIRECT
+DOMAIN,updates-http.cdn-apple.com,DIRECT
+DOMAIN-SUFFIX,ls.apple.com,DIRECT
+DOMAIN-SUFFIX,mzstatic.com,DIRECT
