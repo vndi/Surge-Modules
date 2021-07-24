@@ -25,8 +25,9 @@ always-real-ip = %APPEND% msftconnecttest.com, msftncsi.com, *.msftconnecttest.c
 tun-excluded-routes = %APPEND% 239.255.255.250/32
 
 [URL Rewrite]
-# Redirect Google Search Service
-^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+# turn off Google Safe Search
+(https:\/\/www\.google\.com([.a-z]+)?\/.+)(&safe=(active|strict)&)(.+) $1&safe=off 302
+https://www\.google\.com\.hk\/search\?q=([\w.]+)&(.+) https://www.google.com.sg/search?q=$1&safe=off 302
 
 # Redirect Google Maps Service
 ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
@@ -40,4 +41,4 @@ tun-excluded-routes = %APPEND% 239.255.255.250/32
 ^https?:\/\/(www.)?yhd\.com\/ https://yhd.com/ 302
 
 [MITM]
-hostname = %INSERT% www.google.cn,api.abema.io,app.biliintl.com
+hostname = %INSERT% www.google.com,www.google.com.*
